@@ -1,45 +1,43 @@
 /*
 ** EPITECH PROJECT, 2020
-** B-CPP-300-MPL-3-1-CPPD15-alec.ferrari
+** B-CPP-300-MPL-3-1-CPPD15-corentin.petrau
 ** File description:
-** ex02_tests.cpp
+** ex02_test.cpp
 */
 
+#include "../ex02/ex02.hpp"
 #include <criterion/criterion.h>
 #include <criterion/redirect.h>
-#include <cassert>
-#include <assert.h>
-#include <iostream>
-#include "../ex02/ex02.hpp"
 
-Test(min_template, should_return_a)
+void redirect_all_stdout(void)
 {
-    cr_assert(min<char>('a', 'z') == 'a', "min<char>('a', 'z') isn't 'a'");
+        cr_redirect_stdout();
+        cr_redirect_stderr();
 }
 
-Test(min_template, should_return_b)
+void do_a_test()
 {
-    cr_assert(min<char>('y', 'b') == 'b', "min<char>('y', 'b') isn't 'b'");
+    int tab[2] = {3, 0};
+    int minimum = templateMin(tab, 2);
+    std::cout << "templateMin(tab, 2) = " << minimum << std::endl;
+    minimum = nonTemplateMin(tab, 2);
+    std::cout << "nonTemplateMin(tab, 2) = " << minimum << std::endl;
+    minimum = templateMin(tab, 2);
+    std::cout << "templateMin(tab, 2) = " << minimum << std::endl;
+    minimum = nonTemplateMin(tab, 2);
+    std::cout << "nonTemplateMin(tab, 2) = " << minimum << std::endl;
+    minimum = templateMin(tab, 2);
+    std::cout << "templateMin(tab, 2) = " << minimum << std::endl;
+    minimum = nonTemplateMin(tab, 2);
+    std::cout << "nonTemplateMin(tab, 2) = " << minimum << std::endl;
+    minimum = templateMin(tab, 2);
+    std::cout << "templateMin(tab, 2) = " << minimum << std::endl;
+    minimum = nonTemplateMin(tab, 2);
+    std::cout << "nonTemplateMin(tab, 2) = " << minimum << std::endl;
 }
 
-Test(min_not_template, should_return_one)
+Test(try_template_min, try_to_do_a_template_min, .init=redirect_all_stdout)
 {
-    cr_assert(min(1, 3) == 1, "min(1, 3) isn't 1");
-}
-
-Test(min_not_template, should_return_2)
-{
-    cr_assert(min(3, 2) == 2, "min(3, 2) isn't 2");
-}
-
-Test(templateMin_tab, should_return_zero)
-{
-    int tab[2] = {4, 0};
-    cr_assert(templateMin<int>(tab, 2) == 0, "templateMin<int>(tab, 2) isn't 0");
-}
-
-Test(nonTemplateMin_tab, should_return_zero)
-{
-    int tab[2] = {4, 0};
-    cr_assert(nonTemplateMin(tab, 2) == 0, "templateMin<int>(tab, 2) isn't 0");
+    do_a_test();
+    cr_assert_stdout_eq_str("template min\ntemplateMin(tab, 2) = 0\nnon-template min\nnonTemplateMin(tab, 2) = 0\ntemplate min\ntemplateMin(tab, 2) = 0\nnon-template min\nnonTemplateMin(tab, 2) = 0\ntemplate min\ntemplateMin(tab, 2) = 0\nnon-template min\nnonTemplateMin(tab, 2) = 0\ntemplate min\ntemplateMin(tab, 2) = 0\nnon-template min\nnonTemplateMin(tab, 2) = 0\n", "");
 }

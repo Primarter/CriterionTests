@@ -40,3 +40,17 @@ Test(operations, should_return_sum)
 
     cr_assert(add(a, b) == 5, "add(a, b) isn't 5");
 }
+
+Test(operations, should_return_min1)
+{
+    int a = 1, b = 2;
+
+    cr_assert(min(a, b) == 1, "min(a, b) isn't 1");
+}
+
+Test(operations, should_return_max1)
+{
+    int a = 1, b = 2;
+
+    cr_assert(max(a, b) == 2, "min(a, b) isn't 2");
+}

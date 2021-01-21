@@ -19,6 +19,8 @@ TEST_SRC	=	tests/ex00_tests.cpp	\
 				tests/ex01_tests.cpp	\
 				tests/ex02_tests.cpp	\
 				tests/ex03_tests.cpp	\
+				tests/ex04_tests.cpp	\
+				ex04/ex04.cpp			\
 
 TEST_NAME	=	unit_tests
 

@@ -47,3 +47,36 @@ Test(comparison, should_return_zero)
     int a = 2, b = 2;
     cr_assert(compare(a, b) == 0, "compare(a, b) isn't 0");
 }
+
+Test(comparison, should_return_one1)
+{
+    int a = 5, b = 2;
+    cr_assert(compare(a, b) == 1, "compare(a, b) isn't 1");
+}
+
+Test(comparison, should_equal)
+{
+    const char *str = "pomme";
+    const char *src = "pomme";
+
+    int res = compare(str, src);
+    cr_assert_eq(res, 0);
+}
+
+Test(comparison, should_eq_1)
+{
+    const char *str = "Tototo";
+    const char *src = "Toto";
+
+    int res = compare(str, src);
+    cr_assert_eq(res, 1);
+}
+
+Test(comparison, should_eq_m1)
+{
+    const char *str = "Toto";
+    const char *src = "Tototo";
+
+    int res = compare(str, src);
+    cr_assert_eq(res, -1);
+}
