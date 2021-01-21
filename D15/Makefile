@@ -17,6 +17,8 @@ NAME	=	unit_tests
 
 TEST_SRC	=	tests/ex00_tests.cpp	\
 				tests/ex01_tests.cpp	\
+				tests/ex02_tests.cpp	\
+				tests/ex03_tests.cpp	\
 
 TEST_NAME	=	unit_tests
 
