@@ -3,6 +3,11 @@ import Test.HUnit
 mySucc :: Int -> Int
 mySucc a = a + 1
 
+myIsNeg :: Int -> Bool
+myIsNeg x
+    | x < 0 = True
+    | otherwise = False
+
 myAbs :: Int -> Int
 myAbs a
     | a > 0 = a
@@ -167,6 +172,39 @@ test18 = TestCase (assertEqual "print the tuple swap" (-3, 5) (mySwap (5, -3)))
 test19 = TestCase (assertEqual "print the head" 5 (myHead [5, 6, 7]))
 test20 = TestCase (assertEqual "print the head" 5 (myHead [5]))
 
+test21 = TestCase (assertEqual "print the tail" [6, 7] (myTail [5, 6, 7]))
+test22 = TestCase (assertEqual "print the tail" [] (myTail [5]))
+
+test23 = TestCase (assertEqual "print the Length of a list" 3 (myLength [5, 6, 7]))
+test24 = TestCase (assertEqual "print the Length of a list" 1 (myLength [5]))
+
+test25 = TestCase (assertEqual "print the Nth of a list" 7 (myNth [5, 6, 7] 2))
+test26 = TestCase (assertEqual "print the Nth of a list" 5 (myNth [5] 0))
+
+test27 = TestCase (assertEqual "print the take the Nth first elem of a list" [5, 6] (myTake 2 [5, 6, 7]))
+test28 = TestCase (assertEqual "print the take the Nth first elem of a list" [5] (myTake 24 [5]))
+
+test29 = TestCase (assertEqual "print the drop the Nth first elem of a list" [7] (myDrop 2 [5, 6, 7]))
+test30 = TestCase (assertEqual "print the drop the Nth first elem of a list" [] (myDrop 5 [5]))
+
+test31 = TestCase (assertEqual "print the Append of a list" [5, 6, 7, 2] (myAppend [5, 6, 7] [2]))
+test32 = TestCase (assertEqual "print the Append of a list" [5] (myAppend [] [5]))
+
+test33 = TestCase (assertEqual "print the Reverse list" [7, 6, 5] (myReverse [5, 6, 7]))
+test34 = TestCase (assertEqual "print the Reverse list" [5] (myReverse [5]))
+
+test35 = TestCase (assertEqual "print the Init list" [5, 6](myInit [5, 6, 7]))
+test36 = TestCase (assertEqual "print the Init list" [] (myInit [5]))
+
+test37 = TestCase (assertEqual "print the Last of a list" 7 (myLast [5, 6, 7]))
+test38 = TestCase (assertEqual "print the Last of a list" 5 (myLast [5]))
+
+test39 = TestCase (assertEqual "print the Isneg bool" False (myIsNeg 7))
+test40 = TestCase (assertEqual "print the Isneg bool" True (myIsNeg (-5)))
+
+test41 = TestCase (assertEqual "print the Zip zip two list" [(2, 5), (3, 6), (4, 7)](myZip [2, 3, 4] [5, 6, 7]))
+test42 = TestCase (assertEqual "print the Zip zip two list" [(2, 5), (3, 6), (4, 7)](myZip [2, 3, 4, 5, 6, 7] [5, 6, 7]))
+
 tests = TestList [TestLabel "test1" test1, TestLabel "test2" test2, 
     TestLabel "test3" test3, TestLabel "test4" test4, TestLabel "test5" test5,
     TestLabel "test6" test6, TestLabel "test7" test7, TestLabel "test8" test8,
@@ -175,4 +213,15 @@ tests = TestList [TestLabel "test1" test1, TestLabel "test2" test2,
     TestLabel "test13" test13, TestLabel "test14" test14,
     TestLabel "test15" test15, TestLabel "test16" test16,
     TestLabel "test17" test17, TestLabel "test18" test18,
-    TestLabel "test19" test19, TestLabel "test20" test20]
+    TestLabel "test19" test19, TestLabel "test20" test20,
+    TestLabel "test21" test21, TestLabel "test22" test22,
+    TestLabel "test23" test23, TestLabel "test24" test24,
+    TestLabel "test25" test25, TestLabel "test26" test26,
+    TestLabel "test27" test27, TestLabel "test28" test28,
+    TestLabel "test29" test29, TestLabel "test30" test30,
+    TestLabel "test31" test31, TestLabel "test32" test32,
+    TestLabel "test33" test33, TestLabel "test34" test34,
+    TestLabel "test35" test35, TestLabel "test36" test36,
+    TestLabel "test37" test37, TestLabel "test38" test38,
+    TestLabel "test39" test39, TestLabel "test40" test40,
+    TestLabel "test41" test41, TestLabel "test42" test42]
