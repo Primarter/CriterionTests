@@ -22,4 +22,4 @@
 `ASM minilibc :` `Lines : 66,6%` `Branches : 66,6%`
 
 
-[Primarter](https://github.com/Primarter) [Kryo](https://github.com/Kryo91)
+Author : [Primarter](https://github.com/Primarter) [Kryo](https://github.com/Kryo91)
