@@ -3,20 +3,20 @@
 
 # Coverage
 
-`D09 :\nLines : 97,8%\nBranches : 62,2%`
+`D09 :` `Lines : 97,8%` `Branches : 62,2%`
 
-`D10 :\nLines : 90,5%\nBranches : 51,7%`
+`D10 :` `Lines : 90,5%` `Branches : 51,7%`
 
-`D13 :\nLines : ...%\nBranches : ...%`
+`D13 :` `Lines : ...%` `Branches : ...%`
 
-`D14M :\nLines : 87,5%\nBranches : 66,26%`
+`D14M :` `Lines : 87,5%` `Branches : 66,26%`
 
-`D15 :\nLines : 98,4%\nBranches : 91,6%`
+`D15 :` `Lines : 98,4%` `Branches : 91,6%`
 
-`D17 :\nLines : 100%\nBranches : 88,4%`
+`D17 :` `Lines : 100%` `Branches : 88,4%`
 
-`Haskell D01 :\nLines : 85%\nBranches : 85%`
+`Haskell D01 :` `Lines : 85%` `Branches : 85%`
 
-`Haskell PushSwap_Checker :\nLines : 100%\nBranches : 100%`
+`Haskell PushSwap_Checker :` `Lines : 100%` `Branches : 100%`
 
-`ASM minilibc :\nLines : 66,6%\nBranches : 66,6%`
+`ASM minilibc :` `Lines : 66,6%` `Branches : 66,6%`
