@@ -20,3 +20,6 @@
 `Haskell PushSwap_Checker :` `Lines : 100%` `Branches : 100%`
 
 `ASM minilibc :` `Lines : 66,6%` `Branches : 66,6%`
+
+
+[Primarter](https://github.com/Primarter) [Kryo](https://github.com/Kryo91)
